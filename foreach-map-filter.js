@@ -29,7 +29,7 @@ function onlyEvenValues(arr){
             newArr.push(val);
         }
     });
-    return newArr:
+    return newArr;
 }
 
 /*
@@ -42,8 +42,8 @@ Examples:
 */
 function showFirstAndLast(arr){
     let newArr = [];
-    arr.forEach(function(str) {
-        newArr.push(str[0] + str[str.length - 1]);
+    arr.forEach(function(val) {
+        newArr.push(val[0] + val[val.length - 1]);
     });
     return newArr;
 }
@@ -85,10 +85,11 @@ function vowelCount(str){
             if (obj[lowerCasedLetter]) {
                 obj[lowerCasedLetter]++;
             } else {
-                obi[lowerCasedLetter] = 1;
+                obj[lowerCasedLetter] = 1;
             }
         }
     });
+    return obj;
 }
 
 /*
@@ -141,7 +142,7 @@ Examples:
 
 function extractFullName(arr){
     return arr.map(function(val) {
-        return val.first + " " + value.last;
+        return val.first + " " + val.last;
     });
 }
 
@@ -196,7 +197,7 @@ Examples:
 
 function removeVowels(str) {
     const vowels = 'aeiou';
-    return str.toLowerCase.split("").filter(function(val) {
+    return str.toLowerCase().split("").filter(function(val) {
         return vowels.indexOf(val) === -1;
     }).join("");
 }
